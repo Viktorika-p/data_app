@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
 
 data = pd.read_csv("world_population_data.csv")
 
@@ -27,15 +26,3 @@ prediction_data.to_csv("ukraine_population_predictions.csv", index=False)
 
 for year, population in zip(years_to_predict, predictions):
     print(f"Predicted population for Ukraine in {year}: {population:.2f}")
-
-# Plotting the results
-plt.figure(figsize=(10, 5))
-plt.scatter(ukraine_data['Year'], ukraine_data['Population'], color='blue', label='Actual Population')
-plt.plot(ukraine_data['Year'], model.predict(X), color='red', label='Fitted Line')
-plt.scatter(years_to_predict, predictions, color='green', marker='x', s=100, label='Predictions')
-plt.xlabel('Year')
-plt.ylabel('Population')
-plt.title('Population Prediction for Ukraine')
-plt.legend()
-plt.grid(True)
-plt.show()

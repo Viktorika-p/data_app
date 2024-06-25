@@ -1,0 +1,57 @@
+/* Reset default margin and padding */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center align headings */
+h4 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Container for sections */
+.container {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual section styling */
+.section {
+    width: 45%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+/* Justify paragraph text */
+.section p {
+    text-align: justify;
+    color: #555;
+}
+
+/* Adjust graph height */
+.graph {
+    height: 400px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .section {
+        width: 100%;
+    }
+}
